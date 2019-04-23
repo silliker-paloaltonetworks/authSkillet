@@ -27,19 +27,37 @@ labels:
 # type_hint defines the form field used by panhandler
 # type_hints can be text, ip_address, or dropdown
 variables:
-  - name: hostname
-    description: Firewall hostname
-    default: myFirewall
+  - name: tag_name
+    description: Tag Name
+    default: yourTag
     type_hint: text
-  - name: choices
-    description: sample dropdown list
+  - name: tag_description
+    description: Tag Description
+    default: tag_description
+    type_hint: text
+  - name: tag_color
+    description: Tag Colors
     default: choices
     type_hint: dropdown
     dd_list:
-      - key: option1
-        value: option1
-      - key: option2
-        value: option2
+      - key: Red
+        value: color1
+      - key: Blue
+        value: color3
+      - key: Green
+        value: color22
+  - name: edl_name
+    description: EDL Name
+    default: yourEdlName
+    type_hint: text
+  - name: edl_description
+    description: Description
+    default: description
+    type_hint: text
+  - name: edl_url
+    description: EDL URL
+    default: http://your.host.name/edl.txt
+    type_hint: text
 # ---------------------------------------------------------------------
 # end of variables section
 
@@ -52,7 +70,7 @@ snippets:
     xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/tag
     file: tag.xml
   - name: edl
-    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/external-list/entry[@name='edl_name']
+    xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/external-list
     file: edl.xml
   - name: security_rules
     xpath: /config/devices/entry[@name='localhost.localdomain']/vsys/entry[@name='vsys1']/rulebase/security/rules
