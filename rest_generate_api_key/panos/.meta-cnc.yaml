@@ -1,4 +1,4 @@
-name: generate_api_key_rest
+name: silliker_generate_api_key_rest
 label: Generate PAN-OS API Key
 
 description: |
@@ -9,7 +9,7 @@ type: rest
 extends:
 
 labels:
-  collection: Rest Skillets
+  collection: Silliker
 
 variables:
   - name: TARGET_IP
