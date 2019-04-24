@@ -9,7 +9,7 @@ type: rest
 extends:
 
 labels:
-  collection: Rest Skillets
+  collection: Silliker
 
 variables:
   - name: TARGET_IP
