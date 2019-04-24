@@ -16,10 +16,10 @@ variables:
     description: Host
     default: 127.0.0.1
     type_hint: ip_address
-  - name: api_key
-    description: API Key
-    default: abc123
-    type_hint: text
+#  - name: api_key
+#    description: API Key
+#    default: abc123
+#    type_hint: text
   - name: TARGET_USERNAME
     description: API User
     default: admin
