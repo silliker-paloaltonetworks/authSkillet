@@ -22,10 +22,12 @@ variables:
     type_hint: text
   - name: TARGET_USERNAME
     description: API User
+    default: admin
     type_hint: text
   - name: TARGET_PASSWORD
     description: API Password
-    type_hint: text
+    default: admin
+    type_hint: password
 
 snippets:
   - name: key_gen
